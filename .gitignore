@@ -1,0 +1,14 @@
+.vscode
+.claude
+
+# build output from every C practice project (each Makefile builds into ./bin)
+practice/**/bin/
+# build-pipeline keeps its intermediate files (.i .s .o .a .so) in ./build
+practice/**/build/
+
+# files the practice projects generate while running
+practice/storage-management/toy-filesystem/disk.img
+practice/storage-management/file-io-journey/*.bin
+practice/os-concepts/mini-container/rootfs/
+__pycache__/
+*.o
