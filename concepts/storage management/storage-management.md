@@ -25,9 +25,7 @@ how the OS turns that slow block device into **files and directories**, makes it
    device            SSD controller (FTL, flash) or HDD (platters, heads)
 ```
 
-🖼️ **Image to add - storage stack:** the layer diagram above as a vertical stack of boxes from the
-application down to the physical device, with the page cache highlighted as the place where a
-normal `write()` returns, and `fsync()` drawn as an arrow forcing data all the way down.
+🖼️ **storage stack:**
 ![storage stack](<../../assets/img/storage-stack.png>)
 
 ## What this section covers

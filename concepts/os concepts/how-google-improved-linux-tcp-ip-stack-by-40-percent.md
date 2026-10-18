@@ -36,9 +36,7 @@ connections'* hot data.
  -> the fast path touches 2 lines
 ```
 
-🖼️ **Image to add - struct reorganization:** a struct drawn as a column of 64-byte cache lines,
-before (hot fields colored and scattered across many lines) and after (hot fields packed into the
-first few lines, grouped into "read-mostly" and "read-write" blocks, cold fields below).
+🖼️ **struct reorganization:**
 ![struct cacheline reorganization](<../../assets/img/struct-cacheline-reorg.png>)
 
 ## What the patches did

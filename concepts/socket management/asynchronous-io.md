@@ -63,9 +63,7 @@ The kernel does the **whole operation**, including the copy, and notifies you on
   `fsync`...
 - **POSIX AIO** (`aio_read`) on Linux is limited (glibc implements it with threads) and rarely used.
 
-🖼️ **Image to add - I/O models compared:** four timelines (blocking, non-blocking + busy poll,
-epoll, io_uring), each showing the application thread and the kernel across "wait for data" and
-"copy data" phases - who is blocked when, and how many syscalls happen.
+🖼️ **I/O models compared:**
 ![I/O models](<../../assets/img/io-models.png>)
 
 ## Readiness vs completion: the file problem

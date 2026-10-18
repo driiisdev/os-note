@@ -45,10 +45,7 @@ Opening a path means **resolving** it component by component: read each director
 name, follow its inode number. The kernel caches results (the **dentry cache**) so this is fast
 the second time.
 
-🖼️ **Image to add - path resolution:** the four inodes above drawn as cards with arrows: root
-directory's data block → "home" entry → inode 131 → its data block → "ada" → ... → the file's
-inode → its data block. Highlight that the name "notes.txt" is stored in ada's directory, not in
-inode 9001.
+🖼️ **path resolution:**
 ![path resolution](<../../assets/img/fs-path-resolution.png>)
 
 Consequences of this design:

@@ -46,9 +46,7 @@ setsockopt(fd, IPPROTO_TCP, TCP_USER_TIMEOUT, &ms, sizeof ms);
 With an event loop, timeouts are timers in the loop (`epoll_wait`'s timeout argument, a timer
 wheel or heap) rather than socket options.
 
-🖼️ **Image to add - where each timeout applies:** a request timeline (DNS → TCP connect → TLS →
-send request → wait for response → read body → idle in pool) with a bracket under each phase
-labeled with the timeout that covers it, and one long bracket for the overall deadline.
+🖼️ **where each timeout applies:**
 ![timeout map](<../../assets/img/timeouts-map.png>)
 
 ## Why missing timeouts take systems down

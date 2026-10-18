@@ -29,9 +29,7 @@ how long, switches between them, and keeps them from corrupting each other when 
   sharing memory don't race.
 - **Termination** - exit codes, zombies, `wait()`, signals like `SIGTERM`/`SIGKILL`.
 
-🖼️ **Image to add - process lifecycle:** the state diagram above as a clean graphic - states as
-rounded boxes (new, ready, running, blocked, zombie), transitions labeled with what causes them
-(fork, scheduled, preempted, I/O wait, I/O done, exit, wait).
+🖼️ **process lifecycle:**
 ![process lifecycle](<../../assets/img/process-lifecycle.png>)
 
 ## What this section covers

@@ -59,9 +59,7 @@ Creating a thread costs tens of microseconds; reusing one costs nothing. Real sy
 Java's `ExecutorService`, .NET's thread pool, libuv's worker pool (4 threads by default, for file
 I/O and DNS in Node.js), Rust's `rayon`, Go's runtime scheduler - all variations on this.
 
-🖼️ **Image to add - thread scaling curves:** a chart of speedup vs number of threads (1-32):
-the CPU-bound line rising until the core count and then flattening, the I/O-bound line rising
-almost linearly - using the numbers from the practice project.
+🖼️ **thread scaling curves:**
 ![thread scaling](<../../assets/img/thread-scaling.png>)
 
 ## Measured

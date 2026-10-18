@@ -33,10 +33,7 @@ user code can't switch threads by itself.
                     7. return to user mode at B's saved rip
 ```
 
-🖼️ **Image to add - context switch timeline:** a horizontal timeline for one core: thread A
-running (green), a narrow kernel band (save A / schedule / restore B), thread B running (blue),
-another kernel band, A again - with a callout listing what's saved and a separate band for
-"cache/TLB warm-up" just after each switch.
+🖼️ **context switch timeline:**
 ![context switch](<../../assets/img/context-switch.png>)
 
 ## What it costs

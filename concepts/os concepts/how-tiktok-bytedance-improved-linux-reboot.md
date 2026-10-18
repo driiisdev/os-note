@@ -39,9 +39,7 @@ measured (with `rdtsc` timestamps) **over 500ms** spent on three steps:
 | **Verify** | **purgatory** - a tiny standalone program that runs between the two kernels - checks a SHA-256 digest of the loaded segments, computed at load time, to detect memory corruption | SHA-256 over the whole image, in simple unoptimized code |
 | **Decompress** | a compressed kernel (bzImage) runs its built-in decompressor to unpack the real kernel | decompression of tens of MB |
 
-🖼️ **Image to add - the kexec path:** a timeline from `machine_kexec()` to `start_kernel()` with
-three blocks (copy, SHA-256 verify, decompress) adding up to ">500ms", and below it the patched
-timeline with the three blocks removed and "~15ms" at the end.
+🖼️ **the kexec path:**
 ![kexec reboot path](<../../assets/img/kexec-reboot.png>)
 
 ## The changes proposed

@@ -56,10 +56,7 @@ SIGILL).
 The kernel never trusts pointers from user space: it validates them and copies data across with
 `copy_from_user` / `copy_to_user`, so a bad pointer gives `EFAULT` instead of a kernel crash.
 
-🖼️ **Image to add - syscall round trip:** a two-lane diagram (user mode lane above, kernel mode lane
-below) with a call dropping from `write()` in libc through the `syscall` instruction, into the
-kernel entry, the syscall table and `ksys_write`, and returning via `sysret` - with the registers
-used at each step listed alongside.
+🖼️ **syscall round trip:**
 ![syscall round trip](<../../assets/img/syscall-round-trip.png>)
 
 ## What crossing costs

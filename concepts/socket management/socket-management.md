@@ -24,10 +24,7 @@ are structured to use it efficiently.
                     [ NIC ] <==================== wire ==================>
 ```
 
-🖼️ **Image to add - socket internals:** the diagram above as a clean graphic: application at the
-top, a listening socket with SYN and accept queues, a connection socket with send and receive
-buffers, the TCP/IP stack, the NIC's DMA rings, and the wire - with arrows for an incoming
-packet's path up to `recv()`.
+🖼️ **socket internals:**
 ![socket internals](<../../assets/img/socket-internals.png>)
 
 ## What this section covers

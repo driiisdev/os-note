@@ -39,10 +39,7 @@ TCP-stack side.*
               server: never saw a thing; its socket still shows ESTABLISHED.
 ```
 
-🖼️ **Image to add - silent drop timeline:** three lanes (client, router, server) over 90 minutes:
-a handshake at t=0, a long empty stretch, the router's state entry disappearing at 60m with no
-messages sent, then a query at 90m hitting the router and dying there, with the client and server
-lanes both still labeled ESTABLISHED.
+🖼️ **silent drop timeline:**
 ![silent connection drop](<../../assets/img/router-idle-drop.png>)
 
 Why it's so confusing to debug:

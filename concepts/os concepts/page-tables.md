@@ -31,9 +31,7 @@ branches covering used addresses exist.
   new `CR3`.
 - Machines with huge address spaces use **5-level paging** (57-bit addresses, `la57`).
 
-🖼️ **Image to add - 4-level page walk:** a virtual address split into its five fields, each index
-field pointing into a 512-entry table, CR3 pointing at the first table, and an arrow chain down to
-the physical frame, with the offset carried straight across into the physical address.
+🖼️ **4-level page walk:**
 ![page walk](<../../assets/img/page-walk.png>)
 
 ## What's in a page-table entry

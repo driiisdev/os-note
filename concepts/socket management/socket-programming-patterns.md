@@ -70,10 +70,7 @@ for (;;) {
   worker thread pool.
 - Used by: **nginx**, **Redis**, **Node.js** (libuv), HAProxy, Netty, Python asyncio.
 
-🖼️ **Image to add - server patterns compared:** four small diagrams side by side - iterative (one
-thread, a queue of waiting clients), process-per-connection (one process per client), thread-per-
-connection (one process, one thread per client), event loop (one thread, an epoll box fanning out
-to many sockets) - each with a note on what blocks.
+🖼️ **server patterns compared:**
 ![server patterns](<../../assets/img/server-patterns.png>)
 
 ## 6. Multiple event loops (one per core)

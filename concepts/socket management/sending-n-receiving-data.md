@@ -47,10 +47,7 @@ program is doing something else.
   **sender** stops - its own send buffer fills and its `send()` calls block. Backpressure,
   all the way from a slow reader to the writer.
 
-🖼️ **Image to add - send and receive path:** two hosts side by side; on the sender, the app's
-buffer copied into the send buffer, segments flowing over the wire; on the receiver, the NIC DMA
-into an RX ring, the TCP stack filling the receive buffer, the app's `recv()` copying out; ACKs
-flowing back carrying the window size.
+🖼️ **send and receive path:**
 ![send and receive](<../../assets/img/send-receive-path.png>)
 
 ## TCP is a byte stream, not a message stream

@@ -43,9 +43,7 @@ A **race condition** is any bug where the result depends on timing. The code tha
 shared state is the **critical section**, and the fix is to make it **mutually exclusive** or
 **atomic**.
 
-🖼️ **Image to add - lost update:** two thread timelines side by side with the load/add/store
-steps interleaved as in the diagram above, the shared `counter` box in the middle showing 7 → 8
-→ 8, and the lost increment highlighted.
+🖼️ **lost update:**
 ![lost update race](<../../assets/img/race-condition.png>)
 
 ## The toolbox

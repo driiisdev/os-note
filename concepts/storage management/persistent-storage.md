@@ -50,10 +50,7 @@ only happen a whole block at a time. So the SSD's controller runs a **flash tran
 The extra internal copying is **write amplification**: 1MB written by the OS may cause several MB
 of actual flash writes - worse with small random writes and a nearly full drive.
 
-🖼️ **Image to add - HDD vs SSD internals:** left, an HDD cutaway (platters, head, arm, tracks,
-sectors) with "seek" and "rotate" arrows; right, an SSD: controller with FTL mapping table, NAND
-chips divided into erase blocks and pages, showing an "overwrite" going to a new page and the old
-page marked stale.
+🖼️ **HDD vs SSD internals:**
 ![HDD vs SSD](<../../assets/img/hdd-vs-ssd.png>)
 
 ## Interfaces: how the OS talks to them

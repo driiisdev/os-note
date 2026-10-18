@@ -78,8 +78,7 @@ cd ../tcp-server-patterns && make demo
 While the iterative server runs, `ss -ltn 'sport = :9201'` shows clients piling up in its accept
 queue; `ls /proc/$(pgrep threaded)/task | wc -l` shows one thread per active client.
 
-🖼️ **Image to add - ss output annotated:** a screenshot of `ss -ltn` and `ss -tn` with the
-`Recv-Q`/`Send-Q` columns highlighted and labeled with what they mean for LISTEN vs ESTAB sockets.
+🖼️ **Image to add - ss output annotated:**
 ![ss output annotated](<../../assets/img/ss-annotated.png>)
 
 ## What to take away

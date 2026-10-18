@@ -54,10 +54,7 @@ contains:
 - Output: an **executable** (ELF type `EXEC` or `DYN` for position-independent executables) or a
   **shared library**.
 
-🖼️ **Image to add - compile and link pipeline:** the pipeline above with a file icon at each
-stage (`.c`, `.i`, `.s`, `.o`, executable), a zoom into `main.o` showing its symbol table with
-`U` entries and its relocation list, and arrows from the linker filling those holes with
-addresses from `mathx.o`.
+🖼️ **compile and link pipeline:**
 ![build pipeline](<../../assets/img/build-pipeline.png>)
 
 ## Static vs dynamic linking

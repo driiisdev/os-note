@@ -40,8 +40,7 @@ Each case study is a reminder that the abstractions from earlier sections - "mem
 memory", "a connection is either open or closed", "a reboot is a reboot" - break down at scale,
 and that knowing what's underneath is what lets engineers find and fix the problem.
 
-🖼️ **Image to add - concept map:** a map linking each case study in this section back to the
-earlier section(s) it depends on, in the style of the diagram above.
+🖼️ **concept map:**
 ![OS concepts map](<../../assets/img/os-concepts-map.png>)
 
 ## Practice projects

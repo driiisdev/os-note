@@ -19,20 +19,17 @@ memory (`mmap(MAP_SHARED)`, `shm_open`), message queues, signals.
 
 ```text
  process A (pid 100)                         process B (pid 200)
- +-------------------------------+           +-------------------------+
- | code | globals | heap          |           | code | globals | heap    |
- |  [stack T1] [stack T2] [stack T3]          |  [stack T1]             |
+ +--------------------------------+           +-------------------------+
+ | code | globals | heap          |           | code | globals | heap   |
+ |[stack T1] [stack T2] [stack T3]|           |  [stack T1]             |
  |   T1        T2        T3       |           |   T1                    |
  | fds: 0 1 2 3(socket) 4(file)   |           | fds: 0 1 2              |
- +-------------------------------+           +-------------------------+
+ +--------------------------------+           +-------------------------+
    threads of A share everything                 A and B share nothing
    except their stacks and registers             (separate page tables)
 ```
 
-🖼️ **Image to add - threads inside a process:** two process boxes side by side; inside the first,
-one shared code/data/heap area and three thread lanes, each with its own stack and register set;
-the second process with a single thread; a wall between the processes labeled "separate address
-spaces".
+🖼️ **threads inside a process:**
 ![process vs thread](<../../assets/img/process-vs-thread.png>)
 
 ## On Linux, both are "tasks"

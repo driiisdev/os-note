@@ -48,10 +48,7 @@ so the client's kernel retransmits after 1s, 3s, 7s... The client sees a slow or
 not an error. (`net.ipv4.tcp_abort_on_overflow=1` sends a RST instead.) The kernel counts these
 drops: `nstat -az | grep -i ListenOverflows`.
 
-🖼️ **Image to add - SYN and accept queues:** a client on the left sending SYN / ACK, the server
-kernel in the middle with two queues (SYN queue holding half-open entries, accept queue holding
-established ones), and the app on the right pulling from the accept queue with `accept()`; a
-"queue full → ACK dropped → client retries" branch.
+🖼️ **SYN and accept queues:**
 ![SYN and accept queues](<../../assets/img/syn-accept-queues.png>)
 
 ## Per-connection kernel state

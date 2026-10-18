@@ -7,10 +7,10 @@ restricted, private view of the system.
 
 ```text
         virtual machines                                containers
- +-----------+ +-----------+ +-----------+     +---------+ +---------+ +---------+
- |   app     | |   app     | |   app     |     |   app   | |   app   | |   app   |
- | libs/bins | | libs/bins | | libs/bins |     |libs/bins| |libs/bins| |libs/bins|
- | guest OS  | | guest OS  | | guest OS  |     +---------+ +---------+ +---------+
+ +-----------+ +-----------+ +-----------+     +-----------+ +-----------+ +----------+
+ |   app     | |   app     | |   app     |     |    app    | |    app    | |   app    |
+ | libs/bins | | libs/bins | | libs/bins |     | libs/bins | | libs/bins | |libs/bins |
+ | guest OS  | | guest OS  | | guest OS  |     +-----------+ +-----------+ +----------+
  |  KERNEL   | |  KERNEL   | |  KERNEL   |     |  container runtime (containerd/runc) |
  +-----------+ +-----------+ +-----------+     +--------------------------------------+
  |           hypervisor                  |     |       ONE shared host kernel         |
@@ -20,8 +20,7 @@ restricted, private view of the system.
                                                +--------------------------------------+
 ```
 
-🖼️ **Image to add - VMs vs containers:** the two stacks above as a side-by-side illustration,
-emphasizing "one kernel per VM" vs "one kernel for all containers".
+🖼️ **VMs vs containers:**
 ![VMs vs containers](<../../assets/img/vm-vs-container.png>)
 
 ## Virtual machines

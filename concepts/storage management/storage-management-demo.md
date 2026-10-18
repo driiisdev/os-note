@@ -59,9 +59,7 @@ vmstat 1            # bi/bo = blocks in/out, wa = iowait
 sudo iotop          # per-process I/O
 ```
 
-🖼️ **Image to add - dirty pages draining:** a small chart of `Dirty:` from `/proc/meminfo` over
-~40 seconds after a 512MB buffered write - a sharp rise, a plateau, then the drop when background
-writeback kicks in - with a second line for a `conv=fsync` write that drains immediately.
+🖼️ **dirty pages draining:**
 ![dirty pages](<../../assets/img/dirty-pages.png>)
 
 ## From the practice project

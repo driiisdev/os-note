@@ -46,10 +46,7 @@ you have to do to make data actually durable.
  9. device may still hold it in its VOLATILE write cache
 ```
 
-🖼️ **Image to add - write path timeline:** a horizontal timeline from `write()` to "safe on
-flash": `write()` returns after the page-cache copy (a few µs), then a gap of up to ~30s before
-background writeback, then the device write, then the device cache flush - with `fsync()` drawn
-as a shortcut that forces the whole sequence immediately and waits for it.
+🖼️ **write path timeline:**
 ![write path](<../../assets/img/file-write-path.png>)
 
 If the machine **loses power** between steps 5 and 9, the write is gone - even though the

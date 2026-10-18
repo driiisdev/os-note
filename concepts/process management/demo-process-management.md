@@ -63,9 +63,7 @@ vmstat 1                            # 'cs' = context switches/sec, 'r' = runnabl
 grep ctxt /proc/<pid>/status        # voluntary vs nonvoluntary
 ```
 
-🖼️ **Image to add - reading ps and top:** annotated screenshots of `ps -o pid,ppid,stat,ni,psr,cmd`
-and `top` with threads shown - circling the state column, the parent PID, the CPU a thread last
-ran on, and the load average.
+🖼️ **reading ps and top:**
 ![reading ps and top](<../../assets/img/ps-top-annotated.png>)
 
 ## 6. Build it yourself: a shell
