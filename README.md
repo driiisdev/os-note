@@ -256,14 +256,3 @@ requirements and the full list. In short:
 - Every README includes **output captured from a real run** (WSL2 Ubuntu 24.04, gcc 13, Intel
   i5-8365U). Two scenarios that need `sudo` (`mini-container`, `timeouts-lab` scenario 3) were
   built but not run end-to-end; their READMEs say which output is expected rather than captured.
-
-## Images
-
-Every note has one or more **🖼️ Image to add** callouts: a description of the diagram that would
-help, followed by an image link pointing at `assets/img/<name>.png`. The images don't exist yet -
-create (or find) each one, save it under the name in its link, and it will show up in the note
-automatically. To list them all:
-
-```bash
-grep -rho 'assets/img/[^>)]*' concepts | sort -u
-```
